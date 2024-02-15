@@ -20,7 +20,8 @@ const Inquiry = (props) => {
       inquiryObject = {...inquiryObject,address:props.address};
       //inquiryObject = {...inquiryObject};
       console.log(inquiryObject);
-     let response = await axios.post('http://localhost:4000/addinquiry',{inquiryObject},{
+     //let response = await axios.post('http://localhost:4000/addinquiry'
+     let response = await axios.post( process.env.REACT_APP_BACKEND_URL+'addinquiry',{inquiryObject},{
       headers:{
         'Content-Type': 'multipart/form-data'
       }
