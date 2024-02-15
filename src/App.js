@@ -36,8 +36,8 @@ function App() {
       
         //Using Backend Server
         console.log("env:" + process.env.REACT_APP_BACKEND_URL);
-        let response = await axios.get("http://localhost:4000/houses");
-        //let response = await axios.get(process.env.REACT_APP_BACKEND_URL+"houses");
+        //let response = await axios.get("http://localhost:4000/houses");
+        let response = await axios.get(process.env.REACT_APP_BACKEND_URL+"houses");
         console.log(response);
          setHousesData(response.data);
        }
