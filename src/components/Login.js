@@ -24,7 +24,9 @@ const Login = () => {
         console.log("email: "+ email + " password: "+password);
         // fetch and send values
        try{
-       let response = await axios.post("http://localhost:4000/login",{email:email,password:password});
+         
+        let response = await axios.post("process.env.REACT_APP_BACKEND_URL"+"login",{email:email,password:password});
+       //let response = await axios.post("http://localhost:4000/login",{email:email,password:password});
        console.log(response);
 
        if(response.data.length >0 ){
