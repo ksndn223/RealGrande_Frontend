@@ -21,7 +21,7 @@ const SignUp = () => {
         try{
          // this does not require headers to be changed, as we have app.use(express.json()) in index.js
          
-        let resp = await axios.post('http://localhost:4000/signup',{...formObj};
+        let resp = await axios.post('http://localhost:4000/signup',{...formObj});
          console.log(resp);
          if(resp.data){
             setSignedUp(true);
